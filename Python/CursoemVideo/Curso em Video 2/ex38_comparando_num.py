@@ -1,3 +1,4 @@
+#comparação de dois numeros maior/menos ou igual
 n1 = int(input('Digite aqui um valor: '))
 n2 = int(input('Digite aqui um segundo valor: '))
 if n1 > n2:

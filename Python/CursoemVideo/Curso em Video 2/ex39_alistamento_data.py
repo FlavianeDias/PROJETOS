@@ -1,3 +1,4 @@
+#pegando a data atual e a data de nascimento p/ checagem da data de alistamento
 from datetime import date
 nasc = int(input('Digite aqui o ano do seu nascimento: '))
 ano_atual = (date.today().year)

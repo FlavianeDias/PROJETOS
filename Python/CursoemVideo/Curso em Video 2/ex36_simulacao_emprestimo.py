@@ -1,4 +1,4 @@
-#emprestimo
+#simulação de aprovado/reprovado em um emprestimo
 valor = float(input('Digite aqui o valor do imovel: '))
 an = int(input('Digite aqui em quantos anos deseja pagar: '))
 salario = float(input('Digite aqui o valor do seu salario: '))

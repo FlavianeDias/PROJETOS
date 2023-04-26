@@ -1,3 +1,4 @@
+#fazendo a conversão de um numero p/ binario/octal ou hexa
 nuum = int(input('Digite o numero que deseja converter: '))
 print('Escolha uma destas opções para converter o numero escolhido\n 1- binario \n 2- octal \n 3-hexadecimal')
 escolha = int(input('Digite a opção desejada: '))
