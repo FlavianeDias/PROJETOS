@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400&display=swap');
 
 *{
+    width: 448px;
+    height: 335px;
     background: #1B1A17
+
 }
 .Titulo{
     font-family: 'Inconsolata', monospace;
     color: #00ADB5;
     position: absolute;
     width: 448px;
-    height: 67px;
-    left: 112.88px;
+    height: 178.5px;
+    left: 165.88px;
     top: 275px;
 }
 .SubTitulo__inicial{
@@ -18,7 +21,7 @@
     position: absolute;
     width: 448px;
     height: 42px;
-    left: 113px;
+    left: 165px;
     top: 315px;
 }
 .Apresentacao__inicial{
@@ -28,28 +31,7 @@
     position: absolute;
     width: 448px;
     height: 42px;
-    left: 113.12px; 
+    left: 165px;
     top: 355px;
+}
 
-}
-.Retangulo__foto{
-    position: absolute;
-    width: 457.77px;
-    height: 457.77px;
-    left: 820.85px;
-    top: 211.61px;
-    background: #F0E3CA;
-    border-radius: 100px;
-    transform: rotate(40deg);
-    
-}
-.Retangulo__foto__detalhe{
-    position: absolute;
-    width: 457.77px;
-    height: 457.77px;
-    left: 820.85px;
-    top: 211.61px;
-    background: #00ADB5;
-    border-radius: 100px;
-    transform: rotate(45deg);
-}
