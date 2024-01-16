@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estoque</title>
     <link rel="stylesheet" href="./estoque.css" />
+       <!-- DataTable CSS  -->
+       <link rel="stylesheet"
+       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+   <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.4.1/css/responsive.bootstrap5.min.css">
+
 </head>
     <body>
 
@@ -28,7 +34,63 @@
                 <li><a href="#">Cientes</a></li>
 
                 <li><a href="#">Pagamentos</a></li>li>
+                <li><a href="config_ban.php">teste co</a></li>
             </ul>
 
+        
+            <form action="cadastro.php" method="post">
+                <Label for="">  Modelo: </Label>
+                <input type="text" name='modelo'/>
+                <Label for="">  Quantidade </Label>
+                <input type="int" name='quantidade'/>
+                <Label for="">  Valor Custo: </Label>
+                <input type="int" name='custo'/>
+                <Label for="">  Valor lojista: </Label>
+                <input type="int" name='lojista'/>
+                <Label for="">  Valor Cliente: </Label>
+                <input type="int" name='cliente'/>
+                <button> Cadastrar</button>
+            </form>
+            
+            <div class="container p-3 my-5 bg-light border border-primary">
+                <!-- DataTable Code starts -->
+                <table id="example" class="table table-striped nowrap" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>Modelo</th>
+                            <th>Quantidade</th>
+                            <th>Valor de custo</th>
+                            <th>Valor lojista</th>
+                            <th>Valor Clientes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>IP XR</td>
+                            <td>4</td>
+                            <td>116</td>
+                            <td>163</td>
+                            <td>400</td>
+                        </tr>
+                        <tr>
+                            <td>IP X</td>
+                            <td>3</td>
+                            <td>162</td>
+                            <td>227</td>
+                            <td>440</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+              <!-- DataTable JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.4.1/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.4.1/js/responsive.bootstrap5.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="./estoque.js"></script>
     </body>
 </html>
