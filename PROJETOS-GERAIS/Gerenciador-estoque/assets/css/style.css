@@ -59,9 +59,9 @@ header {
 .banner{
     height: calc(100vh - 100px);
     background-color: #333;
-    background-image: url(../images/bg.jpg);
+    background-image: url(/PROJETOS-GERAIS/Gerenciador-estoque/assets/images/bg.jpeg);
     background-size: cover;
-    background-position: bottom;
+    background-position: center;
     overflow: hidden;
 }
 .banner .sliders {
@@ -125,9 +125,9 @@ header {
 }
 .default .section-desc{
     font-size: 12px;
-    color: #ccc;
+    color: #5c5c5c;
     margin-top: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 15px;
 }
 .default .section-body{
     max-width: 1140px;
@@ -138,4 +138,117 @@ header {
 }
 .default.light .section-title{
     color: #000;
+}
+
+
+
+/*
+CSS page login
+*/
+/* style.css */
+:root{
+--accent: #B28756; /* gold-ish */
+--dark: #0f1723;
+--muted: #6b7280;
+--glass: rgba(255,255,255,0.06);
+}
+body{
+font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+background: #f7f7f8;
+color: var(--dark);
+min-height: 100vh;
+}
+
+
+.auth-root{
+min-height: 100vh;
+display: grid;
+grid-template-columns: 1fr; /* mobile: stack */
+}
+
+
+@media(min-width: 992px){
+.auth-root{ grid-template-columns: 1fr 540px; }
+}
+
+
+.visual-side{
+background-image: url('/PROJETOS-GERAIS/Gerenciador-estoque/assets/images/'); /* <-- replace with your Figma/bg image */
+background-size: cover;
+background-position: center 60%; /* tweak vertical crop */
+position: relative;
+display:flex;
+align-items:center;
+justify-content:center;
+padding: 40px;
+color: #fff;
+}
+
+
+.visual-overlay{
+position: absolute;
+inset: 0;
+background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.55));
+z-index:0;
+}
+
+
+.visual-content{
+position: relative;
+z-index:1;
+max-width: 520px;
+text-align: left;
+}
+
+
+.visual-content h2{
+font-size: clamp(26px, 3.6vw, 40px);
+margin-bottom: 10px;
+font-weight:700;
+letter-spacing: .6px;
+}
+
+
+.visual-content p{ color: #e6e6e6; margin-bottom: 24px; }
+
+
+.brand-mark{
+display:flex; gap:12px; align-items:center; margin-bottom: 26px;
+}
+.brand-mark .logo{
+width:64px; height:64px; border-radius:12px; background:var(--accent); display:inline-block;
+}
+
+
+.form-side{
+display:flex; align-items:center; justify-content:center; padding: 48px 36px;
+}
+
+
+.auth-card{
+width:100%; max-width:420px; background: #fff; border-radius: 12px; box-shadow: 0 8px 30px rgba(20,30,40,0.08); padding: 28px;
+}
+
+
+.auth-card h3{ font-weight:700; margin-bottom:6px; }
+.auth-card p.lead{ color: var(--muted); margin-bottom: 18px; font-size: .95rem }
+
+
+.btn-accent{ background: var(--accent); border:0; color: #fff; }
+
+
+.divider{ display:flex; align-items:center; gap:12px; color:var(--muted); font-size: .9rem }
+.divider::before, .divider::after{ content:""; flex:1; height:1px; background:#e9e9ea; }
+
+
+.small-muted{ color:var(--muted); font-size: .9rem }
+
+
+.form-floating > .form-control{ height: calc(2.5rem + 12px); padding-top: 1.2rem; }
+.mt-18{ margin-top: 18px; }
+
+
+@media(max-width:991px){
+.visual-side{ min-height: 260px }
+.auth-card{ box-shadow: none; border-radius: 0; }
 }
