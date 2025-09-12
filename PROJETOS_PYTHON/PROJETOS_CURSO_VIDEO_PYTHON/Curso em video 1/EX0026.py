@@ -1,2 +1,0 @@
-frase = str(input('Digite uma frase: ')) .strip() .lower()
-print('Na sua frase aparece {} letras A.  a primeira posição aparece {} e a ultima {}'.format(frase.count('a'),frase.find('a') + 1,frase.rfind('a')))
