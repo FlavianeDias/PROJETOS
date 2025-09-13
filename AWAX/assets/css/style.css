@@ -131,7 +131,12 @@ header {
 }
 .default .section-body{
     max-width: 1140px;
-    margin: auto;
+    margin: 30px auto;       /* margem superior/inferior */
+    padding: 20px 30px;      /* padding interno */
+    line-height: 1.8;        /* espaçamento entre linhas */
+    font-size: 16px;         /* tamanho confortável */
+    box-sizing: border-box;  /* inclui padding na largura */
+    color: #333;
 }
 .default.light{
     background-color: #F7F7F7;
@@ -148,7 +153,8 @@ CSS page login -----------------------------------------------------------------
 /* Só aplica quando estiver dentro do login */
 .login-page {
     height: 100vh;
-    background: #f5f7fa;
+    background: linear-gradient(135deg, #000000, #333333), 
+    url('../images/bg-login.jpg') no-repeat center center;
     display: flex;
     justify-content: center;
     align-items: center;

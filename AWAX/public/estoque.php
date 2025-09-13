@@ -1,4 +1,12 @@
 <?php
+session_start();
+
+// se não estiver logado, manda para login
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit;
+}
+
 require_once "../config/database.php";
 require_once "../src/Produto.php";
 
@@ -7,23 +15,26 @@ $produto = new Produto($db);
 
 $stmt = $produto->listar();
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <title>Controle de Estoque</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/PROJETOS-GERAIS/Gerenciador-estoque/assets/css/custom.css" rel="stylesheet">
+    <link href="../assets/css/custom.css" rel="stylesheet">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
         <span class="navbar-brand">Controle de Estoque</span>
+        <div class="d-flex">
+            <span class="navbar-text me-3">Olá, <?= htmlspecialchars($_SESSION['username']) ?></span>
+            <a href="logout.php" class="btn btn-outline-light btn-sm">Sair</a>
+        </div>
     </div>
 </nav>
 
-<div class="container">
+<div class="container" style="margin-top: 80px;">
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
             <h5 class="mb-0">Lista de Produtos</h5>
