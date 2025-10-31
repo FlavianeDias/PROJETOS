@@ -57,6 +57,7 @@ header {
 .menu .active a {
     border-bottom: 5px solid #B28756;
 }
+<<<<<<< Updated upstream
 .button {
     display: inline-block;
     background-color: #B28756;
@@ -192,3 +193,13 @@ CSS de especificas
     width: 480px;
     box-shadow: 0px 3px 5px #333;
 }
+=======
+
+.banner {
+    height:calc (100vh - 100px);
+    background-color: #333;
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    background-position: bottom;
+}
+>>>>>>> Stashed changes
